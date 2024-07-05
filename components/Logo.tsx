@@ -14,14 +14,15 @@ function Logo() {
             >
                 <Image
                 priority
-                src="/images/logos/logo.svg"
+                src="/images/logos/chat-logo.svg"
                 alt="Polyglot Logo"
                 width={50}
                 height={50}
                 className='dark:filter dark:invert'
                 // invert the color of the logo on swtiching modes : theme
-                 />
-
+                 ></Image>
+                 <span className='mx-2 font-semibold text-xl text-black dark:text-white'>Chat With Anyone</span>
+                 
             </AspectRatio>
 
         </div>

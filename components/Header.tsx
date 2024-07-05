@@ -1,15 +1,29 @@
-import React from 'react';
-import Logo from './Logo';
+import React from "react";
+import Logo from "./Logo";
+import {DarkModeToggle} from "./ui/DarkModeToggle";
+import UserButton from "./UserButton";
+
 
 const Header = () => {
   return (
-    <div className=''>
-        <nav>
-            {/* {logo} */}
-            <Logo/>
-        </nav>
-    </div>
-  )
-}
+    <header className="sticky top-0 z-50 bg-white dark:bg-gray-900">
+      <nav className="flex flex-col sm:flex-row  items-center p-5 pl-2 bg-white dark:bg-gray-900 max-w-7xl mx-auto">
+        {/* {logo} */}
+        <Logo />
 
-export default Header
+        <div className="flex-1 flex items-center justify-end space-x-4">
+          {/* Language Select */}
+
+          {/* Session - when logged in */}
+
+          {/* dark mode toggle  */}
+          <DarkModeToggle />
+          {/* user button */}
+          <UserButton/>
+        </div>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
