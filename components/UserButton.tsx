@@ -10,11 +10,15 @@ import {
 import UserAvatar from './UserAvatar'
 import { Session } from 'next-auth'
 import { Button } from './ui/button'
-import { signIn } from 'next-auth/react'
+import { signIn, signOut } from 'next-auth/react'
   
 
 const UserButton = ({session}:{session:Session | null}) => {
   // Session....
+
+  // formatting the username
+  const formattedName = session?.user?.name ? capitalizeName(session.user.name) : "";
+
   if(!session){
     return(
       <>
@@ -31,12 +35,11 @@ const UserButton = ({session}:{session:Session | null}) => {
            
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuLabel>{formattedName}</DropdownMenuLabel>
+
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
+       
+        <DropdownMenuItem onClick={()=>signOut()}>Signout</DropdownMenuItem>
         </DropdownMenuContent>
     </DropdownMenu>
   </div>
@@ -44,4 +47,15 @@ const UserButton = ({session}:{session:Session | null}) => {
   )
 }
 
-export default UserButton
+export default UserButton;
+
+
+
+// utility function to fromat the username
+function capitalizeName(name: string): string {
+  return name
+    .toLowerCase()
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
