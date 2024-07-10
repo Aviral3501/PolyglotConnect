@@ -3,9 +3,9 @@ import {cn} from "../lib/utils"; //adddcustom effect
 import Image from "next/image";
 
 
-function UserAvatar({ name,image,className}:{ name:string,image?:string,className?:string }){
+function UserAvatar({ name,image,className}:{ name?:string | null ,image?:string| null,className?:string }){
     //  className is optional
-    // name  is mandatory
+    // name is mandatory
   return (
     <div>
         {/* combine the className passed with default className */}
