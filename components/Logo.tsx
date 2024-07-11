@@ -21,8 +21,8 @@ function Logo() {
                 className='dark:filter dark:invert'
                 // invert the color of the logo on swtiching modes : theme
                  ></Image>
-                 <span className='mx-2 font-semibold text-xl text-black dark:text-white'>Chat With Anyone</span>
-                 
+                 <span className='mx-2 font-semibold text-xl text-black dark:text-white'>Polyglot -</span>
+                 <span className=' text-sm text-gray-300'>Chat With Anyone</span>
             </AspectRatio>
 
         </div>

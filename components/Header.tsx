@@ -6,6 +6,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/auth";
 import Link from "next/link";
 import {  MessagesSquare } from "lucide-react";
+import CreateChatButton from "./CreateChatButton";
 
 
 const Header = async() => {
@@ -30,6 +31,7 @@ const Header = async() => {
                 {/* chat might be heavy // expensive -> dont prefetch it */}
                 <MessagesSquare className="text-black dark:text-white"/>
                 </Link>
+                <CreateChatButton/>
             </>
           ) : (
             <Link href={"/pricing"}>Pricing</Link>

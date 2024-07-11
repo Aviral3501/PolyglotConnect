@@ -16,8 +16,7 @@ import { signIn, signOut } from 'next-auth/react'
 const UserButton = ({session}:{session:Session | null}) => {
   // Session....
 
-  // formatting the username
-  const formattedName = session?.user?.name ? capitalizeName(session.user.name) : "";
+  // Subscription listener
 
   if(!session){
     return(
@@ -26,6 +25,9 @@ const UserButton = ({session}:{session:Session | null}) => {
       </>
     )
   }
+   // formatting the username
+   const formattedName = session?.user?.name ? capitalizeName(session.user.name) : "Demo User";
+
   return (
     <div>
     <DropdownMenu>
