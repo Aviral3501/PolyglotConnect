@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 
 export default function Home() {
@@ -69,8 +70,8 @@ export default function Home() {
               </span>
             </p>
             <div className=" mt-10 flex items-center justify-center gap-x-6">
-              <Link href={"/chat"} className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white dark:text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 z-20">Get Started</Link>
-              <Link href={"/pricing"}  className="text-sm font-semibold text-gray-900 dark:text-gray-300 z-20">View Pricing <span aria-hidden="true">{"-->"}</span></Link>
+              <Link href={"/chat"} className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white dark:text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 z-20">Get Started</Link>
+              <Link href={"/pricing"}  className="flex flex-row gap-1 text-sm font-semibold text-gray-900 dark:text-gray-300 z-20"> <p>View Pricing</p> <ArrowRight/> </Link>
             </div>
           </div>
                   
