@@ -1,6 +1,10 @@
+import Image from "next/image";
+import Link from "next/link";
+
+
 export default function Home() {
   return (
-    <div className=" h-full w-full relative ">
+    <div className=" h-full w-full relative bg-slate-200/80 dark:bg-transparent ">
     
           {/* grid */}
       <div className=" absolute  inset-0 -z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] dark:bg-[size:1rem_1.5rem] [mask-image:radial-gradient(ellipse_60%_90%_at_50%_0%,#000_70%,transparent_100%)]"></div>
@@ -64,17 +68,31 @@ export default function Home() {
                 Let AI handle the translation.
               </span>
             </p>
+            <div className=" mt-10 flex items-center justify-center gap-x-6">
+              <Link href={"/chat"} className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white dark:text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 z-20">Get Started</Link>
+              <Link href={"/pricing"}  className="text-sm font-semibold text-gray-900 dark:text-gray-300 z-20">View Pricing <span aria-hidden="true">{"-->"}</span></Link>
+            </div>
           </div>
+                  
+              <div className="mt-16 flow-root sm:mt-24">
+                <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+                <Image
+                unoptimized
+                priority
+                src={"/images/landingPage/galaxy-3468.gif"}
+                alt="App Screeshot"
+                width={2432}
+                height={1442}
+                className="rounded-md shadow-2xl ring-1 ring-gray-900/10">
+
+                </Image>
+
+                </div>
+              </div>
+
         </div>
       </div>
             
-       
-
-
-
-    
-
-
     </div>
 
     

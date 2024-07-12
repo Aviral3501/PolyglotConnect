@@ -22,7 +22,7 @@ function Logo() {
                 // invert the color of the logo on swtiching modes : theme
                  ></Image>
                  <span className='mx-2 font-semibold text-xl text-black dark:text-white'>Polyglot -</span>
-                 <span className=' text-sm text-gray-300'>Chat With Anyone</span>
+                 <span className=' text-sm text-gray-700 font-medium dark:text-gray-300'>Chat With Anyone</span>
             </AspectRatio>
 
         </div>

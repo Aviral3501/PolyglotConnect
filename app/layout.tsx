@@ -5,7 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import ClientProviders from "@/components/ClientProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "Polyglot App",
@@ -22,7 +22,7 @@ export default function RootLayout({
     <ClientProviders>
       {/* wrap entire application in the auth provider || client provider */}
       <html lang="en">
-        <body className={inter.className}>
+        <body className={"flex flex-col min-h-screen"}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
