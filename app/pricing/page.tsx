@@ -1,3 +1,4 @@
+import PricingCards from "@/components/PricingCards";
 import Link from "next/link";
 
 type Props = {};
@@ -59,7 +60,9 @@ function PricingPage(){
       </div>
 
       <div className=" flow-root bg-white pb-24 sm:pb-32">
-        <div className="-mt-80">{/* <PricingCards redirect={true}/> */}</div>
+        <div className="-mt-80">
+          <PricingCards redirect={true}/>
+        </div>
       </div>
     </div>
   );
@@ -74,21 +77,3 @@ export default PricingPage;
 
 
 
- {/* <svg
-              viewBox="0 0 1208 1024"
-              className="absolute -top-10 left-1/2 -z-10 h-[64rem] -translate-x-1/2 [mask-image:radical-gradient(closest-side,white,transparent)] sm:-top-12 md:-top-20 lg:-top-12 xl:top-0"
-              >
-                <ellipse
-                cx={604}
-                cy={512}
-                fill="url(#radical-gradient-pricing)"
-                rx={604}
-                ry={512}
-                />
-                <defs>
-                  <radialGradient id="radical-gradient-pricing">
-                    <stop stopColor="#7775D6"/>
-                    <stop offset={1} stopColor="#E935C1"/>
-                  </radialGradient>
-                </defs>
-            </svg> */}

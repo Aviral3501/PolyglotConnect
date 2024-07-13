@@ -1,7 +1,7 @@
 import { withAuth } from "next-auth/middleware"
 
 // protecting the routes 
-export default withAuth;
+export default withAuth();
 
 // pages to protect
 export const config = {

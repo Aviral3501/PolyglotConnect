@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import ClientProviders from "@/components/ClientProvider";
-
 
 
 export const metadata: Metadata = {
@@ -12,11 +10,12 @@ export const metadata: Metadata = {
   description: "Realtime chat app with translation ability",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
 
     <ClientProviders>
@@ -29,7 +28,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Header />
+            <Header/>
             {children}
           </ThemeProvider>
         </body>
