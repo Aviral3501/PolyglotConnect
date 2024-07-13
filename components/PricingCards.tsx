@@ -1,9 +1,11 @@
 import { CheckIcon } from "lucide-react";
+import Link from "next/link";
+import CheckoutButton from "./CheckoutButton";
 
 const tiers = [
   {
     name: "Starter",
-    id: "starterId",
+    id: null,
     href: "#",
     priceMonthly: null,
     description: "Get chatting right away with anyone,anywhere!",
@@ -78,12 +80,20 @@ const PricingCards = (redirect: { redirect: boolean }) => {
                                     </li>
                                 ))}
                             </ul>
-
                         </div>
+
+                           {redirect ? (
+                           <>
+                           
+                           <Link href={"/register"} className=" text-center text-black mt-2 bg-slate-300 rounded-3xl p-2 hover:bg-slate-400">Get Started today</Link>
+                           
+                           </>
+                           ):(
+                           tier.id && (
+                            <CheckoutButton/>
+                           )
+                           )}
                     </div>
-
-                
-
             ))}
 
         </div>
