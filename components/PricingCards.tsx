@@ -35,7 +35,7 @@ const tiers = [
   },
 ];
 
-const PricingCards = (redirect: { redirect: boolean }) => {
+const PricingCards = ({redirect}: { redirect: boolean }) => {
   return (
     <div>
         <div className="mx-auto grid max-w-md grid-cols-1 gap-8 lg:max-w-4xl lg:grid-cols-2 ">
@@ -86,12 +86,9 @@ const PricingCards = (redirect: { redirect: boolean }) => {
                            <>
                            
                            <Link href={"/register"} className=" text-center text-black mt-2 bg-slate-300 rounded-3xl p-2 hover:bg-slate-400">Get Started today</Link>
-                           
                            </>
                            ):(
-                           tier.id && (
-                            <CheckoutButton/>
-                           )
+                           tier.id && <CheckoutButton/>
                            )}
                     </div>
             ))}

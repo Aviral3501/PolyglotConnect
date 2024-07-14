@@ -11,8 +11,8 @@ export default function Home() {
       <div className=" absolute  inset-0 -z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] dark:bg-[size:1rem_1.5rem] [mask-image:radial-gradient(ellipse_60%_90%_at_50%_0%,#000_70%,transparent_100%)]"></div>
       {/* blob bg */}
       {/* --------------------------------------------------------------------------------------------- */}
-      <div
-            className="absolute flex h-full w-full overflow-hidden bg-base-100"
+      {/* <div
+            className="absolute flex h-full w-full overflow-hidden bg-base-100 -z-20"
             style={{ width: "100%", height: "100%" }}
           >
             <div className="h-3/6 w-2/5 translate-y-1/4 opacity-70">
@@ -32,7 +32,7 @@ export default function Home() {
                   <div className="h-full w-full opacity-80 blur-2xl">
                     <div className="h-full w-full blur-2xl">
                       <div
-                        className="rotate-45 h-full w-full bg-indigo-500"
+                        className="rotate-45 h-full w-full  bg-purple-600"
                         style={{
                           clipPath:
                             "polygon(60% 0%, 100% 40%, 70% 100%, 30% 100%, 0% 40%)",
@@ -45,7 +45,7 @@ export default function Home() {
                   <div className="h-full w-full opacity-60 blur-2xl">
                     <div className="h-full w-full blur-2xl">
                       <div
-                        className="rotate-12 h-full w-full bg-indigo-800"
+                        className="rotate-12 h-full w-full bg-purple-600"
                         style={{
                           clipPath:
                             "polygon(50% 0%, 100% 20%, 80% 100%, 20% 100%, 0% 20%)",
@@ -54,7 +54,43 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+      </div> */}
+<div
+  className="absolute flex h-full w-full overflow-hidden bg-base-100 -z-20"
+  style={{ width: "100%", height: "100%" }}
+>
+  <div className="h-3/6 w-2/5 translate-y-1/4 opacity-50">
+    <div className="h-full w-full opacity-50 blur-2xl">
+      <div className="h-full w-full blur-2xl">
+        <div
+          className="rotate-30 h-full w-full bg-[#7775D6] blur-2xl rounded-full"
+        ></div>
       </div>
+    </div>
+  </div>
+  <div className="absolute top-4 right-[8rem] h-2/6 w-1/6 -translate-x-[10rem] translate-y-[15rem]   opacity-50">
+    <div className="h-full w-full opacity-50 blur-2xl">
+      <div className="h-full w-full blur-2xl">
+        <div
+          className="rotate-45 h-full w-full bg-[#E935C1] rounded-full"
+        ></div>
+      </div>
+    </div>
+  </div>
+  <div className="absolute bottom-0 right-3 h-2/6 w-2/6 mr-10 opacity-50">
+    <div className="h-full w-full opacity-50 blur-2xl">
+      <div className="h-full w-full blur-2xl">
+        <div
+          className="rotate-12 h-full w-full bg-[#7775D6] rounded-full"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 {/* --------------------------------------------------------------------------------------------------------- */}
       {/* main content */}
       <div className="py-12 sm:py-20 lg:py-40 min-h-screen">
@@ -84,7 +120,7 @@ export default function Home() {
                 alt="App Screeshot"
                 width={2432}
                 height={1442}
-                className="rounded-md shadow-2xl ring-1 ring-gray-900/10">
+                className="rounded-md shadow-2xl ring-1 ring-gray-900/10 z-20">
 
                 </Image>
 
