@@ -3,7 +3,9 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 
-export default function Home() {
+
+export default async function Home() {
+ 
   return (
     <div className=" h-full w-full relative bg-slate-200/80 dark:bg-transparent ">
     
