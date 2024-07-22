@@ -1,15 +1,30 @@
 "use client"
 
+import { addDoc, collection } from "firebase/firestore";
 import { useSession } from "next-auth/react";
+import { useState } from "react";
+import {db} from '@/firebase';
 
 const CheckoutButton = () => {
   // there is no need to check but just in case
   // check if user is logged in
   const {data:session} = useSession();
-  if(!session) return; 
+  const [loading,setLoading]=useState(false);
 
-  const createCheckoutSession = () => {
+
+  if(!session?.user.id) return; 
+
+
+  const createCheckoutSession = async() => {
     // push the document into firestore db
+    setLoading(true);
+
+    const docRef = await addDoc(collection(db,'customers',session.user.id, 'checout-sessions'),{
+      // fixed price 
+      price:"price_21randomthing",
+      sucess_url:window.location.origin,  // or oyu can directly take them to chat  `${window.origin.location}/chat`
+      cancel_url:window.location.origin,
+    })
 
 
 
